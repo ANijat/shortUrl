@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ShortURL App</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/app.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    outline: none;
+    width: 250px;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background-color: blueviolet;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 7px 15px;
+    border-radius: 5px;
+    width: 250px;
+    cursor: pointer;
+    transition: 300ms;
+}
+.btn:hover {
+    background-color: darkorchid;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+header {
+    background-color: blueviolet;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+section {
+    padding: 30px 0;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<header>
+    <h2>Short Url</h2>
+</header>
+
+<section class="text-center">
+
+        <div class="form-group">
+            <label for="url">Create short URL</label>
+            <input type="text" placeholder="https://test.com" class="form-control" id="url">
+        
+        </div>
+        <div class="form-group">
+            <button id="send" class="btn">Create</button>
+        </div>
+        <div id="response"></div>
+
+</section>
+
+
+
+<section class="text-center">
+
+    <div class="form-group">
+        <label for="url">Show url statistic</label>
+        <input type="text" placeholder="1pFz" class="form-control" id="short">
+    </div>
+    <div class="form-group">
+        <button id="show" class="btn">Show</button>
+    </div>
+    <div id="stats-response"></div>
+
+</section>
+    </body>
+</html>

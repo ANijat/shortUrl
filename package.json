@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.13.0",
     "nanoid": "^3.1.23",
+    "validator": "^13.6.0",
     "winston": "^3.3.3"
   }
 }

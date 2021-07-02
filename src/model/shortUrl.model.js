@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 var { nanoid } = require("nanoid");
-
+const validator= require('validator')
 
 const ShortUrl = mongoose.model('ShortUrl', {
     destination: {
@@ -8,6 +8,12 @@ const ShortUrl = mongoose.model('ShortUrl', {
         trim: true,
         unique: true,
         required: true,
+        validate(value) {
+            if (!validator.isURL(value)) {
+                throw new Error('URL is invalid')
+            }
+        }
+        
     },
     short: {
         type: String,
