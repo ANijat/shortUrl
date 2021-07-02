@@ -5,7 +5,6 @@ const Graph= require('../model/graph.model');
 const { urlencoded } = require('express');
 const router= new express.Router();
 
-const APP_URL = 'http://localhost:3000/';
 
 //Graph
 router.get("/api/graph", async (req,res) => {
@@ -13,7 +12,7 @@ router.get("/api/graph", async (req,res) => {
     try {
         
         const data= Graph
-        .find({destination: 'https://rrr.com'})
+        .find()
         .populate('shortUrl').exec(function(err, urls) {
             if (!urls) {
                 return res.status(405).send()
@@ -37,7 +36,7 @@ router.post('/api/url', async (req, res)=> {
     logger.info(`New api request | url: ${req.url} | body: ${JSON.stringify(req.body)}`);
     try {
         const shorten = await new ShortUrl(req.body).save();
-        let full_shorten_url = APP_URL + shorten.short;
+        let full_shorten_url = process.env.APP_URL + shorten.short;
         res.status(201).send({short_url: full_shorten_url});
 
     } catch (e) {

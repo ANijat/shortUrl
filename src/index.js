@@ -1,10 +1,11 @@
-const express= require('express')
-const logger= require('./utils/logger')
-const shortUrl= require('./routers/shorturl')
+require('dotenv').config({path: "./.env" });
+const express= require('express');
+const logger= require('./utils/logger');
+const shortUrl= require('./routers/shorturl');
 const path = require('path');
 const cors = require('cors');
+require('./utils/mongoose');
 
-require('./utils/mongoose')
 
 const app= express()
 const port = process.env.Port || 3000
@@ -14,7 +15,7 @@ app.use(shortUrl)
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors({
-    origin: "http://localhost:3000" 
+    origin: process.env.APP_URL 
 }));
 
 
