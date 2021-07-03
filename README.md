@@ -3,7 +3,7 @@
 
 ## Install
 
-    node install
+    npm install
 
 ## Run the app
 
