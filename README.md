@@ -17,7 +17,7 @@ Mentioned 6 environment variables need to be configured: DATABASE_URL, APP_URL
 
 /api/graph GET -> Gets all redirection records
 ```shell
-curl --location --request GET 'http://host:port/api/graph'
+curl --location --request GET 'http://hostname:port/api/graph'
 ```
 
 
