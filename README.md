@@ -16,6 +16,10 @@ Mentioned 6 environment variables need to be configured: DATABASE_URL, APP_URL
 ## REST API
 
 /api/graph GET -> Gets all redirection records
+```shell
+curl --location --request GET 'http://199.247.24.157:9075/api/graph'
+```
+
 
 /api/url POST -> Creates new short url by destination url
 
