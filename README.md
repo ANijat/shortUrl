@@ -7,6 +7,7 @@
 
 ## Run the app
 Mentioned 6 environment variables need to be configured: DATABASE_URL, APP_URL
+
     node src/index.js
 
 
