@@ -33,4 +33,15 @@ $ curl --location --request POST 'http://199.247.24.157:9075/api/url' \
 
 /api/:short/stats GET -> Gets count,destination, short by shortid
 
+```shell
+curl --location --request GET 'http://199.247.24.157:9075/api/QlHY/stats'
+}'
+```
 /:short GET -> Redirects to destination url 
+
+```shell
+curl --location --request GET 'http://199.247.24.157:9075/QlHY'
+}'
+```
+
+
