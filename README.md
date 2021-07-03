@@ -8,7 +8,7 @@ Web application that allows users to take a long URL and convert it to a shorten
     npm install
 
 ## Run the app
-Mentioned 6 environment variables need to be configured: DATABASE_URL, APP_URL
+Mentioned 2 environment variables need to be configured: DATABASE_URL, APP_URL
 
     node src/index.js
 
